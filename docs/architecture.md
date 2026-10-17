@@ -7,6 +7,7 @@ This document outlines the architectural philosophy, packaging decisions, and de
 ## 1. Zero Runtime Dependencies
 
 One of the foundational tenets of `@codewithraheem/devkit` is that it ships with **zero production runtime dependencies**.
+
 - Eliminates transitive dependency security risks.
 - Reduces bundle sizes to the absolute minimum.
 - Guarantees immunity to supply-chain package hijacking or breaking upstream changes.
@@ -18,6 +19,7 @@ One of the foundational tenets of `@codewithraheem/devkit` is that it ships with
 Modern JavaScript applications run across heterogeneous environments (ESM in modern browsers, Vite, Next.js, Cloudflare Workers; CJS in legacy Node backends and tools).
 
 `@codewithraheem/devkit` uses `tsup` (powered by esbuild) to produce:
+
 - Native ESM bundles (`.mjs`) with standard `import`/`export`.
 - CommonJS bundles (`.cjs`) with `module.exports`.
 - Dedicated TypeScript declaration bundles (`.d.ts` for ESM and `.d.cts` for CJS).
@@ -25,6 +27,7 @@ Modern JavaScript applications run across heterogeneous environments (ESM in mod
 ### Package Exports Mapping
 
 In `package.json`:
+
 ```json
 "exports": {
   ".": {
@@ -49,6 +52,7 @@ This prevents consumers from importing private internal build files and guarante
 JavaScript prototype pollution attacks occur when untrusted user input is allowed to write to properties such as `__proto__`, `constructor`, or `prototype`.
 
 In `@codewithraheem/devkit`:
+
 - `pick` and `omit` filter out forbidden keys.
 - `getPath` prevents traversing prototype keys.
 - `deepClone` skips cloning into prototype properties.
@@ -58,6 +62,7 @@ In `@codewithraheem/devkit`:
 ## 4. Date & DST Correctness
 
 A common pitfall in utility libraries is assuming calendar days are always 24 hours (86,400,000 ms). Due to Daylight Saving Time shifts:
+
 - A spring forward day is 23 hours.
 - A fall backward day is 25 hours.
 

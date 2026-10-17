@@ -37,6 +37,7 @@ npm pack --dry-run
 ```
 
 Verify that:
+
 - All tests pass with >90% coverage.
 - No TypeScript or ESLint errors exist.
 - Tarball size is lean (~100 KB).
@@ -47,6 +48,7 @@ Verify that:
 ## 3. Version Bump
 
 Follow Semantic Versioning:
+
 - **Patch** (`0.1.1`): Backwards-compatible bug fixes.
 - **Minor** (`0.2.0`): New backwards-compatible features/utilities.
 - **Major** (`1.0.0`): Breaking changes or stable public API graduation.
