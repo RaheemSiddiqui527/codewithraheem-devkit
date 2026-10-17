@@ -110,7 +110,33 @@ const { pick } = require("@codewithraheem/devkit/object");
 
 ---
 
-## Public API Reference & Usage Examples
+## Documentation Index
+
+Explore comprehensive developer guides, module deep dives, and API references in the [`docs/`](docs/) directory:
+
+### Core Guides
+
+- [**Getting Started Guide**](docs/getting-started.md) — Installation, TypeScript configuration, import patterns, and quick-start tutorials.
+- [**TypeScript Guide**](docs/typescript.md) — Generic inference, discriminated union pattern matching, and custom type guards.
+- [**Browser & Node.js Compatibility**](docs/browser-and-node.md) — Verified runtime compatibility, zero Node-only internals, and bundler setup.
+- [**API Reference Index**](docs/api-reference.md) — Complete alphabetical index of all 38 public functions and exported types.
+- [**Contributing Guide**](docs/contributing.md) — Local development workflow, coding standards, and pull request checklist.
+- [**Frequently Asked Questions (FAQ)**](docs/faq.md) — Common questions about installation, subpath imports, and design decisions.
+
+### Module References
+
+- [**Array Utilities (`@codewithraheem/devkit/array`)**](docs/array.md) — `chunk`, `unique`, `groupBy`, `partition`, `compact`, `flatten`, `shuffle`.
+- [**Object Utilities (`@codewithraheem/devkit/object`)**](docs/object.md) — `pick`, `omit`, `isEmpty`, `getPath`, `deepClone`.
+- [**String Utilities (`@codewithraheem/devkit/string`)**](docs/string.md) — `capitalize`, `toCamelCase`, `toKebabCase`, `toSnakeCase`, `truncate`, `slugify`, `isBlank`.
+- [**Number Utilities (`@codewithraheem/devkit/number`)**](docs/number.md) — `clamp`, `roundTo`, `randomInt`, `sum`, `average`, `isFiniteNumber`.
+- [**Async Utilities (`@codewithraheem/devkit/async`)**](docs/async.md) — `sleep`, `retry`, `withTimeout`, `debounce`, `throttle`, `TimeoutError`.
+- [**Validation Utilities (`@codewithraheem/devkit/validation`)**](docs/validation.md) — `safeJsonParse`, `isValidJSON`, `isEmail`, `isURL`, `isUUID`, `isPlainObject`.
+- [**Error Utilities (`@codewithraheem/devkit/error`)**](docs/errors.md) — `normalizeError`, `getErrorMessage`, `isErrorLike`.
+- [**Date Utilities (`@codewithraheem/devkit/date`)**](docs/date.md) — `isValidDate`, `startOfDay`, `endOfDay`, `daysBetween`.
+
+---
+
+## Public API Reference & Quick Usage
 
 ### 1. Array Utilities (`@codewithraheem/devkit/array`)
 
@@ -632,3 +658,5 @@ npm run build
 
 Released under the [MIT License](LICENSE).  
 Copyright © 2025-2026 CodeWithRaheem (Raheem Siddiqui).
+#   - c o d e w i t h r a h e e m - d e v k i t -  
+ 
