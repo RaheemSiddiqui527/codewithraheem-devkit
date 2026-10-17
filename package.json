@@ -1,0 +1,114 @@
+{
+  "name": "@codewithraheem/devkit",
+  "version": "0.1.0",
+  "description": "A lightweight, TypeScript-first utility toolkit for modern JavaScript developers. Learn. Build. Innovate.",
+  "author": "CodeWithRaheem (https://github.com/RaheemSiddiqui527)",
+  "license": "MIT",
+  "homepage": "https://github.com/RaheemSiddiqui527/codewithraheem-devkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaheemSiddiqui527/codewithraheem-devkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RaheemSiddiqui527/codewithraheem-devkit/issues"
+  },
+  "keywords": [
+    "utilities",
+    "typescript",
+    "toolkit",
+    "helpers",
+    "devkit",
+    "codewithraheem",
+    "functional",
+    "zero-dependency",
+    "tree-shaking",
+    "node",
+    "browser"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./array": {
+      "types": "./dist/array/index.d.ts",
+      "import": "./dist/array/index.mjs",
+      "require": "./dist/array/index.cjs"
+    },
+    "./object": {
+      "types": "./dist/object/index.d.ts",
+      "import": "./dist/object/index.mjs",
+      "require": "./dist/object/index.cjs"
+    },
+    "./string": {
+      "types": "./dist/string/index.d.ts",
+      "import": "./dist/string/index.mjs",
+      "require": "./dist/string/index.cjs"
+    },
+    "./number": {
+      "types": "./dist/number/index.d.ts",
+      "import": "./dist/number/index.mjs",
+      "require": "./dist/number/index.cjs"
+    },
+    "./async": {
+      "types": "./dist/async/index.d.ts",
+      "import": "./dist/async/index.mjs",
+      "require": "./dist/async/index.cjs"
+    },
+    "./validation": {
+      "types": "./dist/validation/index.d.ts",
+      "import": "./dist/validation/index.mjs",
+      "require": "./dist/validation/index.cjs"
+    },
+    "./error": {
+      "types": "./dist/error/index.d.ts",
+      "import": "./dist/error/index.mjs",
+      "require": "./dist/error/index.cjs"
+    },
+    "./date": {
+      "types": "./dist/date/index.d.ts",
+      "import": "./dist/date/index.mjs",
+      "require": "./dist/date/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "format": "prettier --write \"src/**/*.{ts,js,json}\" \"tests/**/*.{ts,js,json}\" \"*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,json}\" \"tests/**/*.{ts,js,json}\" \"*.{ts,js,json,md}\"",
+    "clean": "node -e \"const fs = require('fs'); fs.rmSync('dist', { recursive: true, force: true }); fs.rmSync('coverage', { recursive: true, force: true });\"",
+    "prepack": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0",
+    "vitest": "^3.0.5"
+  }
+}

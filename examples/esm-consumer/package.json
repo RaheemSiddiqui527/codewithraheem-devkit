@@ -1,0 +1,9 @@
+{
+  "name": "esm-consumer-example",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@codewithraheem/devkit": "file:../.."
+  }
+}
