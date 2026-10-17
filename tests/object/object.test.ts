@@ -49,7 +49,6 @@ describe("Object Utilities", () => {
 
     it("guards against prototype pollution", () => {
       const obj = { a: 1, constructor: "polluted" };
-      // @ts-expect-error testing prototype keys
       const res = omit(obj, ["a"]);
       expect(res).toEqual({});
     });
